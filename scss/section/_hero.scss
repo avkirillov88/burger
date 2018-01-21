@@ -15,11 +15,16 @@
 }
 
 .header__logo {
+  height: 67px;
   margin-right: auto;
 }
 
+.logo__img {
+  height: 69px;
+}
+
 .nav {
-  margin-right: rem(15px);
+  margin-right: rem(12px);
   &__list {
     margin: 0;
     padding: 0;
@@ -38,7 +43,7 @@
     @include circle(4px, #fff);
     margin: 0 14.6px;
   }
-  
+
   &:last-child:after {
     display: none;
   }
@@ -73,7 +78,7 @@
   flex-wrap: wrap;
   flex-grow: 1;
   align-items: center;
-  padding-bottom: 15%;
+  padding-bottom: 17%;
 }
 
 .hero__img, .hero__description {
@@ -81,9 +86,15 @@
   display: flex;
 }
 
+.hero__img {
+  padding-left: 19px;
+}
+
 .hero__description {
   flex-direction: column;
   justify-content: center;
+  padding-left: 9px;
+  padding-top: 79px;
 }
 
 .section__title {
@@ -93,7 +104,7 @@
   font-weight: 300;
   line-height: 1.42;
   margin: 0;
-  padding-top: 60px;
+  margin-bottom: 10px;
 }
 
 .hero__description-text {
@@ -106,9 +117,7 @@
 
 .arrow__scroll {
   position: absolute;
-  left: 50%;
-  bottom: 20px;
+  left: 49%;
+  bottom: 38px;
   display: block;
-  width: 60px;
-  height: 60px;
 }

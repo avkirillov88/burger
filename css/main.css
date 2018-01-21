@@ -138,10 +138,14 @@ ul {
   padding-top: 10px; }
 
 .header__logo {
+  height: 67px;
   margin-right: auto; }
 
+.logo__img {
+  height: 69px; }
+
 .nav {
-  margin-right: 0.9375rem; }
+  margin-right: 0.75rem; }
   .nav__list {
     margin: 0;
     padding: 0; }
@@ -206,7 +210,7 @@ ul {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding-bottom: 15%; }
+  padding-bottom: 17%; }
 
 .hero__img, .hero__description {
   -ms-flex-preferred-size: 50%;
@@ -215,6 +219,9 @@ ul {
   display: -ms-flexbox;
   display: flex; }
 
+.hero__img {
+  padding-left: 19px; }
+
 .hero__description {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -222,7 +229,9 @@ ul {
   flex-direction: column;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
-  justify-content: center; }
+  justify-content: center;
+  padding-left: 9px;
+  padding-top: 79px; }
 
 .section__title {
   color: #f9b43b;
@@ -231,7 +240,7 @@ ul {
   font-weight: 300;
   line-height: 1.42;
   margin: 0;
-  padding-top: 60px; }
+  margin-bottom: 10px; }
 
 .hero__description-text {
   color: #ffffff;
@@ -242,11 +251,9 @@ ul {
 
 .arrow__scroll {
   position: absolute;
-  left: 50%;
-  bottom: 20px;
-  display: block;
-  width: 60px;
-  height: 60px; }
+  left: 49%;
+  bottom: 38px;
+  display: block; }
 
 .best {
   background-image: url("../img/bg/best-bg.png");
@@ -393,8 +400,8 @@ ul {
 
 .fixed {
   position: fixed;
-  top: 90px;
-  right: 40px;
+  top: 88px;
+  right: 52px;
   margin: 0;
   padding: 0;
   list-style: none; }
