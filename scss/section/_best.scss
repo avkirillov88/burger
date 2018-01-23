@@ -9,7 +9,7 @@
 }
 
 .section__title--best {
-  color: #2f3234;
+  color: $dark;
   padding: 0;
   margin-bottom: rem(30px);
 }
@@ -23,32 +23,32 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-left: 17px;
+  margin-left: rem(17px);
   text-align: center;
   flex: 1;
 
   &:first-child {
-    margin-left: 0px;
+    margin-left: 0;
   }
 }
 
 .best__logo {
-  width: 100px;
-  height: 100px;
-  margin-bottom: 18px;
+  width: rem(100px);
+  height: rem(100px);
+  margin-bottom: rem(18px);
 }
 
 .best__title{
   font-family: 'Lifehack', Arial, sans-serif;
-  font-size: 24px;
-  line-height: 28px;
-  margin-bottom: 15px;
+  font-size: rem(24px);
+  line-height: rem(28px);
+  margin-bottom: rem(15px);
 }
 
-.best__description{
+p {
   font-family: 'Ubuntu', Arial, sans-serif;
-  color: #7e7c7b;
-  font-size: 14px;
-  line-height: 24px;
+  color: $grey;
+  font-size: rem(14px);
+  line-height: rem(24px);
   font-weight: 300;
 }

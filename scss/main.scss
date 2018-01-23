@@ -1,5 +1,6 @@
-//config
+@import url('normalize.css');
 
+//config
 @import "config/_variables.scss";
 @import "config/_mixins.scss";
 
@@ -13,5 +14,6 @@
 @import "section/_best.scss";
 @import "section/_review.scss";
 @import "section/_nav-fixed.scss";
-
-
+@import "section/_map.scss";
+@import "section/_delivery.scss";
+@import "section/_team.scss";

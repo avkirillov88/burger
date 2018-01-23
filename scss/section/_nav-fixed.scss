@@ -1,10 +1,14 @@
 .fixed {
   position: fixed;
-	top: 88px;
+  top: 88px;
 	right: 52px;
 	margin: 0;
 	padding: 0;
 	list-style: none;
+
+	@include tablets {
+		display: none;
+	}
 
 	&__item {
 		margin-bottom: 5px;
