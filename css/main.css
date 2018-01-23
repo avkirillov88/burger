@@ -1,3 +1,4 @@
+@import url(normalize.css);
 @font-face {
   font-family: 'Lifehack';
   src: url("../fonts/lifehack_medium-webfont.woff2") format("woff2"), url("../fonts/lifehack_medium-webfont.woff") format("woff");
@@ -71,10 +72,10 @@ ul {
 
 .wrapper {
   width: 100%;
-  height: 100%; }
+  height: 100vh; }
 
 .maincontent {
-  height: 100%;
+  height: 100vh;
   min-height: 650px; }
 
 .container {
@@ -95,7 +96,7 @@ ul {
   flex-direction: column; }
 
 .section {
-  height: 100%;
+  height: 100vh;
   background-color: rgba(0, 0, 0, 0.31);
   min-width: 940px;
   min-height: 650px; }
@@ -182,7 +183,7 @@ ul {
     text-decoration: underline; }
 
 .hero__container {
-  height: 100%;
+  height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -313,7 +314,7 @@ ul {
   line-height: 28px;
   margin-bottom: 15px; }
 
-.best__description {
+p {
   font-family: 'Ubuntu', Arial, sans-serif;
   color: #7e7c7b;
   font-size: 14px;
@@ -324,7 +325,7 @@ ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 100%; }
+  height: 100vh; }
   .review__list {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -337,8 +338,7 @@ ul {
     height: 50%; }
   .review__logo {
     position: relative;
-    width: 100%;
-    height: 100%; }
+    width: 100%; }
   .review__logo-pic {
     width: 100%;
     height: 100%;
