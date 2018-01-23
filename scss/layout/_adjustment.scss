@@ -9,19 +9,31 @@
 }
 
 .container {
+  width: 100%;
   width: 940px;
   margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+
+  @include tablets {
+    width: 750px;
+  }
+
+  @include phones {
+    width: 95%;
+  }
 }
 
 .section {
   height: 100vh;
   background-color: rgba(0,0,0,0.31);
-  min-width: 940px;
   min-height: 650px;
+
+  @include tablets {
+    
+  }
 }
 
 .order-link {
