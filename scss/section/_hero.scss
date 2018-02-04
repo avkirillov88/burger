@@ -11,23 +11,34 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 10px;
+  padding-top: rem(10px);
+
+  @include tablets {
+    padding-top: rem(20px);
+    padding-right: rem(34px);
+    padding-left: rem(24px);
+  }	
 }
 
 .header__logo {
-  height: 67px;
+  height: rem(67px);
   margin-right: auto;
 }
 
 .logo__img {
-  height: 69px;
+  height: rem(69px);
 }
 
 .nav {
   margin-right: rem(12px);
+
   &__list {
     margin: 0;
     padding: 0;
+
+    @include tablets {
+      display: none;
+    }	
   }
 }
 
@@ -39,9 +50,9 @@
   &:after {
     display: inline-block;
     vertical-align: middle;
-    content: ' ';
-    @include circle(4px, #fff);
-    margin: 0 14.6px;
+    content: "";
+    @include circle(rem(4px), #fff);
+    margin: 0 rem(14.6px);
   }
 
   &:last-child:after {
@@ -51,7 +62,7 @@
 
 .nav__link {
   color: #ffffff;
-  font-size: 13px;
+  font-size: rem(13px);
   font-weight: 400;
   line-height: 1.42;
   text-transform: uppercase;
@@ -78,7 +89,13 @@
   flex-wrap: wrap;
   flex-grow: 1;
   align-items: center;
+  justify-content: center;
+  text-align: center;
   padding-bottom: 17%;
+
+  @include tablets {
+    justify-content: center;
+  }	
 }
 
 .hero__img, .hero__description {
@@ -87,24 +104,33 @@
 }
 
 .hero__img {
-  padding-left: 19px;
+  padding-left: rem(19px);
+
+  @include tablets {
+    padding-left: 0;
+  }
 }
 
 .hero__description {
   flex-direction: column;
   justify-content: center;
-  padding-left: 9px;
-  padding-top: 79px;
+  padding-left: rem(9px);
+  padding-top: rem(79px);
+
+  @include tablets {
+    padding: 0;
+    text-align: center;
+  }
 }
 
 .section__title {
-  color: #f9b43b;
+  color: $yellow;
   font-family: 'Gagalin';
-  font-size: 72px;
+  font-size: rem(72px);
   font-weight: 300;
   line-height: 1.42;
   margin: 0;
-  margin-bottom: 10px;
+  margin-bottom: rem(10px);
 }
 
 .hero__description-text {
@@ -118,6 +144,42 @@
 .arrow__scroll {
   position: absolute;
   left: 49%;
-  bottom: 38px;
+  bottom: rem(38px);
   display: block;
+}
+
+.hamburger-menu-link{
+  vertical-align: middle;
+  position: relative;
+  height: 1.375rem;
+  align-items: center;
+  margin-left: 1.875rem;
+  display: none;
+
+  @include tablets {
+    display: flex;
+  }
+}
+
+.hamburger-menu-link__bars {
+	&, &:before, &:after {
+		background: #fff;
+		width: rem(24px);
+		height: rem(5px);
+		border-radius: rem(3px);
+	}
+
+	&:before, &:after {
+		content: "";
+		display: block;
+		position: absolute;
+	}
+
+	&:before {
+		top: 0;
+	}
+
+	&:after {
+		bottom: 0;
+	}
 }

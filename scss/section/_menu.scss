@@ -1,0 +1,82 @@
+.menu {
+	background: url('../img/bg/menu_bg.jpg') 50% no-repeat;
+	background-size: cover;
+	position: relative;
+}
+
+.section__title--menu {
+	position: absolute;
+	top: 5%;
+	left: 7%;
+	color: $dark;
+  padding: 0;
+	margin-bottom: 0;
+	color: #fff;
+
+	@include phones {
+		top: 5%;
+		left: 15%;
+	}
+}
+
+.menu-acco {
+	position: absolute;
+	right: 0;
+	top: 0;
+	bottom: 0;
+  display: flex;
+}
+
+.menu-acco__item {
+	height: 100%;
+
+	&.active {
+		.menu-acco__trigger-text {
+		color: $yellow;
+		}
+	}
+}
+
+.menu-acco__trigger {
+	width: rem(80px);
+	display: block;
+	height: 100%;
+	float: left;
+	background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+	text-decoration: none;
+  position: relative;
+}
+
+.menu-acco__trigger-text {
+	font-size: rem(40px);
+	color: #fff;
+	font-family: 'Gagalin', Arial, sans-serif;
+	text-align: center;
+	white-space: nowrap;
+  position: absolute;
+  transform: rotate(-90deg) translateY(-50%);
+  transform-origin: 0 0;
+  left: 50%;
+  top: 100%;
+  margin-top: rem(-40px);
+}
+
+.menu-acco__content {
+	height: 100%;
+	float: left;
+	background: rgba(#2f3234, .93);
+	width: 0;
+	overflow: hidden;
+}
+
+.menu-acco__text {
+	font-family: 'Ubuntu', Arial, sans-serif;
+	font-size: rem(14px);
+	color: #fff;
+	padding: rem(60px) rem(30px);
+	width: 100%;
+  line-height: 1.8;
+  display: none;
+}
