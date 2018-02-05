@@ -86,7 +86,7 @@
 .hero__content {
   width: 100%;
   display: flex;
-  flex-wrap: wrap;
+  //flex-wrap: wrap;
   flex-grow: 1;
   align-items: center;
   justify-content: center;
@@ -95,6 +95,7 @@
 
   @include tablets {
     justify-content: center;
+    flex-direction: column;
   }	
 }
 
@@ -107,8 +108,13 @@
   padding-left: rem(19px);
 
   @include tablets {
+    margin-bottom: rem(20px);
     padding-left: 0;
   }
+}
+
+.hero__img-pic {
+  max-width: 95%;
 }
 
 .hero__description {
