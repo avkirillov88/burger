@@ -1,0 +1,162 @@
+.team {
+  background-image: url('../img/bg/team_bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+	position: relative;
+	
+	&__container {
+		width: 100%;
+
+		@include tablets {
+		width: 68%;
+		}
+	}
+
+  &__right {
+	padding-left: rem(98px);
+	padding-top: rem(113px);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 50%;
+	background: rgba(47, 50, 52, 0.93);
+
+		@include tablets {
+			width: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			padding: 0;
+		}
+	}
+		
+	&__accordeon {
+		margin: 0;
+    padding: 0;
+		list-style: none;
+		
+		@include tablets {
+			text-align: center;
+		}
+	}
+
+	&__item {
+		margin-bottom: rem(26px);
+
+		&-active .team__link:before {
+			transform: rotate(-180deg);
+		}
+
+		&-active .team__link {
+			color: $yellow;
+		}
+	}
+
+	&__link {
+		position: relative;
+		padding-left: rem(18px);
+    font-family: 'Gagalin', Arial, sans-serif;
+    font-size: rem(14px);
+    color: #fff;
+    text-decoration: none;
+		transition: .5s ease-out;
+
+		@include tablets {
+			font-size: rem(25px);
+		}
+			
+		&:before {
+			position: absolute;
+			content: "";
+			left: 0;
+			top: 40%;
+    	border-style: solid;
+    	border-width: rem(7px) rem(5px) 0 rem(5px);
+    	border-color: $yellow transparent transparent transparent;
+			transition: .5s ease-out;
+		}
+	}
+
+	&__desc {
+		display: block;
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: .5s ease-out;
+	}
+
+	&__desc-active {
+		display: flex;
+		height: rem(113px);
+		padding-top: rem(11px);
+		opacity: 1;
+
+		@include tablets {
+			height: rem(220px);
+			text-align: center;
+		}
+	}
+
+	&__desc-wrap {
+		display: flex;
+		flex: 1;
+
+		@include tablets {
+			align-items: center;
+			flex-direction: column;
+		}
+	}
+
+	&__text {
+		font-size: rem(14px);
+    line-height: rem(24px);
+		color: #fff;
+		width: rem(240px);
+		margin-left: rem(20px);
+
+		@include laptop {
+			margin-left: 0;
+			width: 60%;
+		}
+
+		@include tablets {
+			margin-left: 0;
+			width: 65%;
+		}
+		
+		&-title {
+			margin-bottom: rem(16px);
+			font-family: 'Ubuntu', Arial, sans-serif;
+			font-weight: 700;
+			font-size: rem(14px);
+    	line-height: 1;
+		}
+	}
+
+	&__img {
+		width: rem(100px);
+    height: rem(100px);
+    border-radius: 50%;
+		overflow: hidden;
+
+		@include tablets {
+			margin-bottom: rem(20px);
+		}		
+
+		&-pic {
+			@include tablets {
+				width: rem(100px);
+				height: rem(100px);
+			}		
+		}
+	}
+}
+
+.section__title--team {
+	margin-bottom: rem(57px);
+
+	@include tablets {
+		text-align: center;
+	}
+}

@@ -1,0 +1,275 @@
+.delivery {
+	background-image: url('../img/content/order-bg.jpg');
+  background-repeat: no-repeat;
+  background-position: 50%;
+	background-size: cover;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.delivery-bg {
+	background-image: url('../img/content/order-bg_texture.jpg');
+  background-repeat: no-repeat;
+  background-position: 50%;
+	background-size: cover;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+	opacity: 0.9;
+}
+
+.section__title--delivery {
+	margin-bottom: rem(25px);
+	text-align: center;
+}
+
+.form {
+	display: flex;
+	width: 100%;
+
+	@include tablets {
+		width: rem(472px);
+		flex-direction: column;
+		justify-content: center;
+	}
+	
+	@include phones {
+		width: 100%;
+  }
+
+	&__column {
+		width: 50%;
+		margin-left: rem(20px);
+
+		@include tablets {
+			width: 100%;
+			margin-left: 0;
+		}
+
+		&:first-child {
+			margin-left: 0;
+		}
+	}
+
+	&__row {
+		margin-bottom: rem(14px);
+	}
+
+	&__input {
+		height: rem(35px);
+		padding-left: rem(20px);
+		border-radius: rem(5px);
+		border: none;
+
+		&:focus {
+			outline: 0;
+			opacity: 1;
+			border: rem(2px) solid #f9b43b;
+			border-radius: rem(5px);
+		}
+	}
+
+	&__field-title {
+		margin-bottom: rem(2px);
+    font-family: 'Ubuntu', Arial, sans-serif;
+		font-size: rem(14px);
+		font-weight: 300;
+    line-height: rem(24px);
+    color: #fff;
+	}
+
+	&__big-text {
+		width: 100%;
+		height: rem(110px);
+		padding-left: rem(20px);
+		border-radius: rem(5px);
+		border: none;
+		resize: none;
+
+		&:focus {
+			outline: 0;
+			opacity: 1;
+			border: 2px solid #f9b43b;
+			border-radius: rem(5px);
+		}
+	}
+}
+
+.form__row-2 {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+
+	.form__input-elem {
+		width: 100%;
+		margin-left: rem(10px);
+
+		&:first-child {
+			margin-left: 0;
+		}
+		
+		.form__input {
+			width: 100%;
+		}
+	}
+}
+
+.form__row-1 {
+	display: flex;
+	flex-direction: row;
+
+	.form__input-elem {
+		width: 100%;
+		.form__input {
+			width: 100%;
+		}
+	}
+}
+
+.form__row-4 {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+
+	.form__input-elem {
+		width: 25%;
+		margin-left: rem(10px);
+
+		&:first-child {
+			margin-left: 0;
+		}
+		.form__input {
+			width: 100%;
+			text-align: center;
+			padding-left: 0;
+		}
+	}
+}
+
+.form__field-title {
+	display: block;
+}
+
+.form-buttons {
+	display: flex;
+	margin-bottom: rem(26px);
+
+	@include phones {
+		margin-bottom: rem(38px);
+		justify-content: center;
+	}
+}
+
+.radio {
+	position: relative;
+	white-space: nowrap;
+	margin-right: rem(20px);
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+  }
+  
+  .radio-elem {
+	position: absolute;
+	top: 0;
+	left: rem(-9999px);
+  }
+  
+  .radio-fake {
+	width: rem(15px);
+	height: rem(15px);
+	border-radius: 50%;
+	background: #fff;
+	position: relative;
+	&:after {
+	  content: "";
+	  display: block;
+	  position: absolute;
+	  width: rem(0px);
+	  height: rem(0px);
+	  border-radius: 50%;
+	  background: $orange;
+	  top: 50%;
+	  left: 50%;
+	  transform: translate(-50%, -50%);
+	  transition: width .3s, height .3s;
+	}
+  }
+  
+  .radio-elem:checked {
+	&+.radio-fake {
+	  &:after {
+		width: rem(8px);
+		height: rem(8px);
+	  }
+	}
+  }
+  
+  .radio-title {
+	font-size: rem(14px);
+	color: #fff;
+	margin-left: rem(10px);
+  }
+  
+  .radio_checkbox {
+	.radio-fake {
+	  border-radius: rem(0px);
+	}
+	.radio-elem {
+	  &+.radio-fake {
+		&:after {
+		  background: transparent;
+		}
+	  }
+	}
+	.radio-elem:checked {
+	  &+.radio-fake {
+		&:after {
+		  background: url("../../img/icons/check.svg") 50% no-repeat transparent;
+		  background-size: contain;
+		  width: rem(13px);
+		  height: rem(13px);
+		}
+	  }
+	}
+  }
+  
+  .form-button {
+	margin-right: rem(20px);
+	border: 0;
+	background: $orange;
+	font-size: rem(13px);
+	text-transform: uppercase;
+	border-radius: rem(5px);
+	color: #ffffff;
+	//@include ubuntu(middle);
+	padding: rem(10px) rem(15px);
+	cursor: pointer;
+  }
+  
+  .form-button_reset {
+	padding-left: 0;
+	padding-right: 0;
+	text-transform: none;
+	background: transparent;
+	}
+	
+	.radio_checkbox {
+		margin-bottom: rem(40px);
+		@include phones {
+			display: flex;
+			justify-content: center
+		}
+	}
+
+	.form__row--phones {
+		margin-bottom: 0;
+		
+		@include phones {
+			display: flex;
+			justify-content: center
+		}
+	}
