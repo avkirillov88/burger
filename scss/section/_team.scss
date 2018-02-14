@@ -81,30 +81,21 @@
 	&__desc {
 		display: block;
     height: 0;
-    opacity: 0;
     overflow: hidden;
     transition: .5s ease-out;
 	}
 
-	&__desc-active {
+	&__desc-wrap {
 		display: flex;
 		height: rem(113px);
 		padding-top: rem(11px);
 		opacity: 1;
-
-		@include tablets {
-			height: rem(220px);
-			text-align: center;
-		}
-	}
-
-	&__desc-wrap {
-		display: flex;
 		flex: 1;
 
 		@include tablets {
 			align-items: center;
 			flex-direction: column;
+			height: auto;
 		}
 	}
 

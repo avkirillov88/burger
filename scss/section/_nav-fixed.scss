@@ -12,6 +12,11 @@
 
 	&__item {
 		margin-bottom: 5px;
+		
+		&.active{
+			border: 1px solid #fff;
+			border-radius: 50%;
+		}
 	}
 
 	&__item-link {
@@ -30,7 +35,10 @@
     	transform: translate(-50%, -50%);
 		}
 
-		&:hover, &.is-active {
+		&:hover {
+
+			width: 16px;
+   		height: 16px;
 
 			&:after {
 				content: '';
