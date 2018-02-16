@@ -24,6 +24,12 @@
 .section__title--delivery {
 	margin-bottom: rem(25px);
 	text-align: center;
+
+	@include phones {
+		font-size: rem(62px);
+		font-weight: 300;
+		line-height: 1.2;
+  }
 }
 
 .form {
@@ -134,8 +140,34 @@
 	flex-direction: row;
 	justify-content: space-between;
 
+	@include phones {
+			display: none;
+		}
+
 	.form__input-elem {
 		width: 25%;
+		margin-left: rem(10px);
+
+		&:first-child {
+			margin-left: 0;
+		}
+		.form__input {
+			width: 100%;
+			text-align: center;
+			padding-left: 0;
+		}
+	}
+}
+
+.form__row-3{
+	display: none;
+
+	@include phones {
+		display: flex;
+	}
+
+	.form__input-elem {
+		width: 33%;
 		margin-left: rem(10px);
 
 		&:first-child {
@@ -255,6 +287,10 @@
 	padding-right: 0;
 	text-transform: none;
 	background: transparent;
+
+	&:focus{
+		outline: none;
+	}
 	}
 	
 	.radio_checkbox {

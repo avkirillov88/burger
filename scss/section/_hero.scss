@@ -40,7 +40,6 @@
       position: fixed;
       top: 0;
       left: 0;
-      display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
@@ -48,14 +47,10 @@
       height: 100%;
       background: rgba(47, 50, 52, 0.99);
       z-index: 0;
-      opacity: 0;
       transition: .5s;
+      display: none;
     }
   }
-}
-
-.hamburger__view{
-  opacity: 1;
 }
 
 .nav__item {
@@ -190,6 +185,10 @@
   font-size: rem(65px);
   font-weight: 400;
   line-height: 1;
+
+  @include phones {
+    font-size: rem(56px);
+  }
 }
 
 .arrow__scroll {
@@ -197,6 +196,11 @@
   left: 49%;
   bottom: rem(38px);
   display: block;
+
+  &:hover{
+    transform: translateY(-50%) scale(1.8);
+    transition: .4s;
+  }
 }
 
 .hamburger-menu-link{
@@ -255,4 +259,12 @@
 	bottom: 0;
 	transform: rotate(-45deg);
 	transition: bottom 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1);;
+}
+
+.hamburger__view{
+  display: flex;
+}
+
+.arrow__scroll--none {
+  display: none;
 }

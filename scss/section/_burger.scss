@@ -12,6 +12,12 @@
 		height: auto;
 }
 
+@include tablets {
+	width: 85%;
+	text-align: center;
+	height: 85%;
+}
+
 }
 
 .arrow__left, .arrow__right{
@@ -22,10 +28,20 @@
 
 .arrow__left-pic{
 	transform: rotate(90deg);
+
+	&:hover{
+		transform: translateY(-50%) rotate(90deg) scale(1.2);
+		transition: .4s;
+	}
 }
 
 .arrow__right-pic{
 	transform: rotate(-90deg);
+
+	&:hover{
+		transform: translateY(-50%) rotate(-90deg) scale(1.2);
+		transition: .4s;
+	}
 }
 
 .burger{
@@ -77,11 +93,8 @@
 	margin-right: rem(-14px);
 
 	@include tablets {
-		width: 67%;
-	}
-
-	@include phones {
 		width: 100%;
+		margin-bottom: rem(25px);
 	}
 }
 
@@ -95,25 +108,34 @@
 	background: rgba(228, 80, 40, 0.4) url(../img/icons/burger.svg) no-repeat top 14px center;
 	border-radius: 5px;
 	transition: background-color .3s ease-out;
+	display: flex;
+  justify-content: center;
 
 	@include tablets {
 		top: 0%;
     right: 74%;
     bottom: auto;
     left: auto;
-  }
+	}
+	
+	@include phones {
+		top: 0%;
+		right: 72%;
+	}
 
 	&-title{
 		position: absolute;
-    right: 0;
-    left: 0;
     bottom: rem(10px);
     font-family: 'Gagalin', Arial, sans-serif;
     font-size: rem(14px);
     line-height: 1;
     text-align: center;
     color: #fff;
-    cursor: pointer;
+		cursor: pointer;
+
+		@include phones {
+			top: 80%;
+		}
 	}
 
 	&:hover{
@@ -128,8 +150,8 @@
 	left: 4%;
 
 	@include tablets {
-		top: 0%;
-    left: 74%;
+	top: 0%;
+  left: 76%;
   }
 }
 
@@ -147,7 +169,12 @@
 	@include tablets {
 		top: 4.5%;
 		right: 20%;
-  }
+	}
+	
+	@include phones {
+		top: 6.5%;
+		right: 20%;
+	}
 }
 
 .burger-kcal__unit{
@@ -158,21 +185,25 @@
 	@include tablets {
 		top: 11%;
     left: 16%;
-  }
+	}
+	
+	@include phones {
+		top: 14%;
+	}	
 }
 
 .burger__item--pic{
 	max-width: 100%;
+
+	@include phones {
+		width: 85%;
+	}
 }
 
 .burger__item--right{
 	width: 50%;
 	
 	@include tablets {
-		width: 67%;
-	}
-
-	@include phones {
 		width: 100%;
 	}
 
