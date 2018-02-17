@@ -12,6 +12,11 @@
   color: $dark;
   padding: 0;
   margin-bottom: rem(30px);
+
+  @include phones {
+    margin-bottom: rem(20px);
+    font-size: rem(64px);
+  }
 }
 
 .best__list {
@@ -40,10 +45,14 @@
     flex-direction: row;
     text-align: left;
     margin-left: rem(19px);
-    margin-bottom: rem(54px);
+    margin-bottom: rem(70px);
 
     &:first-child {
       margin-left: rem(19px);
+    }
+
+    &:last-child {
+      margin-bottom: 0;
     }
   }
 }
@@ -53,6 +62,8 @@
     display: flex;
     flex-direction: column;
     text-align: left;
+    width: 70%;
+    padding-left: rem(10px);
   }
 }
 
@@ -81,7 +92,8 @@
   margin-bottom: rem(15px);
 
   @include phones {
-    margin-bottom: 0;
+    font-size: rem(28px);
+    margin-bottom: rem(5px);
   }
 }
 
@@ -89,6 +101,6 @@ p {
   font-family: 'Ubuntu', Arial, sans-serif;
   color: $grey;
   font-size: rem(14px);
-  line-height: rem(24px);
+  line-height: 1.42;
   font-weight: 300;
 }

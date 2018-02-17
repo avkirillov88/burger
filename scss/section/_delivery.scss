@@ -24,6 +24,12 @@
 .section__title--delivery {
 	margin-bottom: rem(25px);
 	text-align: center;
+
+	@include phones {
+		font-size: rem(62px);
+		font-weight: 300;
+		line-height: 1.2;
+  }
 }
 
 .form {
@@ -134,8 +140,34 @@
 	flex-direction: row;
 	justify-content: space-between;
 
+	@include phones {
+			display: none;
+		}
+
 	.form__input-elem {
 		width: 25%;
+		margin-left: rem(10px);
+
+		&:first-child {
+			margin-left: 0;
+		}
+		.form__input {
+			width: 100%;
+			text-align: center;
+			padding-left: 0;
+		}
+	}
+}
+
+.form__row-3{
+	display: none;
+
+	@include phones {
+		display: flex;
+	}
+
+	.form__input-elem {
+		width: 33%;
 		margin-left: rem(10px);
 
 		&:first-child {
@@ -179,8 +211,8 @@
   }
   
   .radio-fake {
-	width: rem(15px);
-	height: rem(15px);
+	width: rem(16px);
+	height: rem(16px);
 	border-radius: 50%;
 	background: #fff;
 	position: relative;
@@ -245,7 +277,6 @@
 	text-transform: uppercase;
 	border-radius: rem(5px);
 	color: #ffffff;
-	//@include ubuntu(middle);
 	padding: rem(10px) rem(15px);
 	cursor: pointer;
   }
@@ -255,6 +286,10 @@
 	padding-right: 0;
 	text-transform: none;
 	background: transparent;
+
+	&:focus{
+		outline: none;
+	}
 	}
 	
 	.radio_checkbox {
@@ -271,5 +306,14 @@
 		@include phones {
 			display: flex;
 			justify-content: center
+		}
+	}
+
+	.order__send{
+		padding: 10% 0;
+		text-align: center;
+
+		&-content {
+			margin-bottom: 10%;
 		}
 	}
