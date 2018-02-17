@@ -9,11 +9,6 @@ $(function() {
         }
     });
 
-    $('#nav_hamburger').click(function(){
-      $.fn.fullpage.setKeyboardScrolling(false);
-      $.fn.fullpage.setAllowScrolling(false);
-    });
-    
     $('.fixed__item-link, .onepage').on('click', function(e) {
         e.preventDefault();
   
@@ -28,6 +23,7 @@ $(function() {
 
         $(".nav__list").removeClass('hamburger__view');
         $(".hamburger-menu-link__bars").removeClass('animate');
+        $(".nav_hamburger").removeClass('active');
 
         $.fn.fullpage.setKeyboardScrolling(true);
         $.fn.fullpage.setAllowScrolling(true);
