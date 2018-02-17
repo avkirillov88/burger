@@ -119,6 +119,9 @@ ul {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.31);
   min-height: 650px; }
+  @media (max-width: 480px) {
+    .section {
+      min-height: 0px; } }
 
 .order-link {
   min-width: 6.125rem;
@@ -878,7 +881,7 @@ p {
   top: 0;
   right: 0;
   left: 0;
-  bottom: 60px;
+  bottom: 3.75rem;
   background: #aaaaaa; }
 
 .delivery {
@@ -1171,6 +1174,12 @@ p {
       -webkit-box-pack: center;
       -ms-flex-pack: center;
       justify-content: center; } }
+
+.order__send {
+  padding: 10% 0;
+  text-align: center; }
+  .order__send-content {
+    margin-bottom: 10%; }
 
 .team {
   background-image: url("../img/bg/team_bg.jpg");
@@ -1515,8 +1524,8 @@ p {
     position: absolute;
     width: 5.625rem;
     height: 5.625rem;
-    top: 29.5%;
-    left: 4%;
+    top: 19.5%;
+    left: 1%;
     z-index: 1;
     background: rgba(228, 80, 40, 0.4) url(../img/icons/burger.svg) no-repeat top 14px center;
     border-radius: 5px;
@@ -1556,8 +1565,8 @@ p {
   .burger .burger__kcal {
     position: absolute;
     opacity: .5;
-    bottom: 23%;
-    left: 4%; }
+    bottom: 13%;
+    left: 1%; }
     @media (max-width: 768px) {
       .burger .burger__kcal {
         top: 0%;

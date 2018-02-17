@@ -277,7 +277,6 @@
 	text-transform: uppercase;
 	border-radius: rem(5px);
 	color: #ffffff;
-	//@include ubuntu(middle);
 	padding: rem(10px) rem(15px);
 	cursor: pointer;
   }
@@ -307,5 +306,14 @@
 		@include phones {
 			display: flex;
 			justify-content: center
+		}
+	}
+
+	.order__send{
+		padding: 10% 0;
+		text-align: center;
+
+		&-content {
+			margin-bottom: 10%;
 		}
 	}

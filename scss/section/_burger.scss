@@ -102,8 +102,8 @@
 	position: absolute;
 	width: rem(90px);
 	height: rem(90px);
-	top: 29.5%;
-	left: 4%;
+	top: 19.5%;
+    left: 1%;
 	z-index: 1;
 	background: rgba(228, 80, 40, 0.4) url(../img/icons/burger.svg) no-repeat top 14px center;
 	border-radius: 5px;
@@ -146,8 +146,8 @@
 .burger__kcal{
 	position: absolute;
 	opacity: .5;
-	bottom: 23%;
-	left: 4%;
+	bottom: 13%;
+    left: 1%;
 
 	@include tablets {
 	top: 0%;

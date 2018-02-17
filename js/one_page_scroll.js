@@ -6,28 +6,31 @@ $(function() {
         $('.fixed__item').eq(nextIndex - 1).addClass('active')
           .siblings()
           .removeClass('active');
-
-          if (nav_list.classList.contains('hamburger__view')) {
-              e.preventDefault();
-              $.fn.fullpage.setKeyboardScrolling(false);
-              $.fn.fullpage.setAllowScrolling(false);
-          }
         }
     });
 
+    $('#nav_hamburger').click(function(){
+      $.fn.fullpage.setKeyboardScrolling(false);
+      $.fn.fullpage.setAllowScrolling(false);
+    });
+    
     $('.fixed__item-link, .onepage').on('click', function(e) {
-      e.preventDefault();
+        e.preventDefault();
   
-      var $this = $(this),
-          href = parseInt($this.attr('href'));
+        var $this = $(this),
+            href = parseInt($this.attr('href'));
   
-      $this.closest('li').addClass('active')
-        .siblings()
-        .removeClass('active');
+        $this.closest('li').addClass('active')
+          .siblings()
+          .removeClass('active');
+  
+        $.fn.fullpage.moveTo(href);
 
-      $(".nav__list").removeClass('hamburger__view');
-  
-      $.fn.fullpage.moveTo(href);
+        $(".nav__list").removeClass('hamburger__view');
+        $(".hamburger-menu-link__bars").removeClass('animate');
+
+        $.fn.fullpage.setKeyboardScrolling(true);
+        $.fn.fullpage.setAllowScrolling(true);
     });
   
     $('.arrow__scroll').on('click', function(e) {
@@ -39,5 +42,4 @@ $(function() {
       e.preventDefault();
       
     });
-
   });
