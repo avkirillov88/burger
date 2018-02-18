@@ -16,7 +16,6 @@ ymaps.ready(init);
         [59.950222,30.386067]
     ],
         myCollection = new ymaps.GeoObjectCollection();
-    // или myCollection = new ymaps.GeoObjectArray(...);
 
     for (var i = 0; i < coords.length; i++) {
       myCollection.add(new ymaps.Placemark(coords[i], {}, {

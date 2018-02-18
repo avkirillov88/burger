@@ -1,3 +1,4 @@
+// Ajax форма
 $('#order-form').on('submit', function(event) {
     event.preventDefault();
   
