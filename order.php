@@ -1,3 +1,5 @@
+<!-- Отправка письма о заказе -->
+
 <?php
 
 header('Content-type: application/json');

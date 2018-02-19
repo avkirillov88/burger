@@ -119,6 +119,7 @@
 		
 		.form__input {
 			width: 100%;
+			text-align: left !important;
 		}
 	}
 }
@@ -140,10 +141,6 @@
 	flex-direction: row;
 	justify-content: space-between;
 
-	@include phones {
-			display: none;
-		}
-
 	.form__input-elem {
 		width: 25%;
 		margin-left: rem(10px);
@@ -153,33 +150,12 @@
 		}
 		.form__input {
 			width: 100%;
-			text-align: center;
+			text-align: center !important;
 			padding-left: 0;
 		}
 	}
 }
 
-.form__row-3{
-	display: none;
-
-	@include phones {
-		display: flex;
-	}
-
-	.form__input-elem {
-		width: 33%;
-		margin-left: rem(10px);
-
-		&:first-child {
-			margin-left: 0;
-		}
-		.form__input {
-			width: 100%;
-			text-align: center;
-			padding-left: 0;
-		}
-	}
-}
 
 .form__field-title {
 	display: block;
@@ -279,6 +255,11 @@
 	color: #ffffff;
 	padding: rem(10px) rem(15px);
 	cursor: pointer;
+
+		&.disabled{
+			cursor: default;
+			opacity: 0.5;
+	}
   }
   
   .form-button_reset {
@@ -316,4 +297,8 @@
 		&-content {
 			margin-bottom: 10%;
 		}
+	}
+
+	.empty__field{
+		box-shadow: 0 0 1px 1px red;
 	}
