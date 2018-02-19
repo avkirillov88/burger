@@ -1,14 +1,22 @@
 // Ajax форма
 $(function() {
+  $('#phone').inputmask({alias: "numeric"});
+});
+
+$(function() {
+  $('#house-mask').inputmask({alias: "numeric"});
+});
+
+$(function() {
 
   $('.form').each(function(){
     var form = $(this),
         btn = form.find('.form-button-send');
     
-    form.find('.form__input').addClass('empty__field');
+    form.find('.form__input-required').addClass('empty__field');
     
     function checkInput(){
-      form.find('.form__input').each(function(){
+      form.find('.form__input-required').each(function(){
         if($(this).val() != ''){
           $(this).removeClass('empty__field');
         } else {

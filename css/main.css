@@ -1002,7 +1002,8 @@ p {
     .form__row-2 .form__input-elem:first-child {
       margin-left: 0; }
     .form__row-2 .form__input-elem .form__input {
-      width: 100%; }
+      width: 100%;
+      text-align: left !important; }
 
 .form__row-1 {
   display: -webkit-box;
@@ -1028,9 +1029,6 @@ p {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between; }
-  @media (max-width: 480px) {
-    .form__row-4 {
-      display: none; } }
   .form__row-4 .form__input-elem {
     width: 25%;
     margin-left: 0.625rem; }
@@ -1038,24 +1036,7 @@ p {
       margin-left: 0; }
     .form__row-4 .form__input-elem .form__input {
       width: 100%;
-      text-align: center;
-      padding-left: 0; }
-
-.form__row-3 {
-  display: none; }
-  @media (max-width: 480px) {
-    .form__row-3 {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex; } }
-  .form__row-3 .form__input-elem {
-    width: 33%;
-    margin-left: 0.625rem; }
-    .form__row-3 .form__input-elem:first-child {
-      margin-left: 0; }
-    .form__row-3 .form__input-elem .form__input {
-      width: 100%;
-      text-align: center;
+      text-align: center !important;
       padding-left: 0; }
 
 .form__field-title {
