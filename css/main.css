@@ -161,6 +161,9 @@ ul {
   padding-top: 0.625rem; }
   @media (max-width: 768px) {
     .header {
+      position: absolute;
+      z-index: 9999;
+      top: 0;
       padding-top: 1.25rem;
       padding-right: 0.75rem;
       padding-left: 0; } }
