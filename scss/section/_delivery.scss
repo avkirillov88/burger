@@ -279,6 +279,11 @@
 	color: #ffffff;
 	padding: rem(10px) rem(15px);
 	cursor: pointer;
+
+		&.disabled{
+			cursor: default;
+			opacity: 0.5;
+	}
   }
   
   .form-button_reset {
@@ -316,4 +321,8 @@
 		&-content {
 			margin-bottom: 10%;
 		}
+	}
+
+	.empty__field{
+		box-shadow: 0 0 1px 1px red;
 	}
